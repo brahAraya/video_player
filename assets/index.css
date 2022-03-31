@@ -1,0 +1,42 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+body {
+    background: #151515;
+    color: #030303;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 1rem 0;
+    background-image: linear-gradient(160deg, #5145ff 0%, #57f5c6 100%);
+    color: white;
+    box-shadow: 0px 0px 30px #00000023;
+}
+
+header>h1 {
+    margin-bottom: 0;
+}
+
+header>p {
+    font-style: italic;
+    margin-top: .5rem;
+}
+
+main {
+    padding: 3.5rem 0;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.movie {
+    width: 100%;
+}

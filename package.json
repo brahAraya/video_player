@@ -1,0 +1,17 @@
+{
+    "name": "video_player",
+    "version": "1.0.0",
+    "description": "Práctica js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "live-server"
+    },
+    "keywords": [
+        "javascript"
+    ],
+    "author": "Brahian Araya",
+    "license": "ISC",
+    "devDependencies": {
+        "live-server": "^1.1.0"
+    }
+}
