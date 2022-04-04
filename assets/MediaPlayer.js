@@ -34,6 +34,10 @@ class MediaPlayer {
 			this.pause();
 		}
 	}
+
+	test() {
+		alert("ESTOY FUNCIONANDO AAAAAA");
+	}
 }
 
 export default MediaPlayer;

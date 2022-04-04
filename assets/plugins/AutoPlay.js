@@ -2,7 +2,7 @@ class AutoPlay {
 	constructor() {}
 
 	run(player) {
-		player.mute();
+		player.test();
 		player.play();
 	}
 }
