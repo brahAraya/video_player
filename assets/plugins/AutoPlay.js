@@ -1,10 +1,10 @@
 class AutoPlay {
-	constructor() {}
+    constructor() {}
 
-	run(player) {
-		player.test();
-		player.play();
-	}
+    run(player) {
+        player.mute();
+        player.play();
+    }
 }
 
 export default AutoPlay;

@@ -1,43 +1,43 @@
 class MediaPlayer {
-	constructor(config) {
-		this.media = config.el;
-		this.plugins = config.plugins || [];
-		this._initPlugins();
-	}
+    constructor(config) {
+        this.media = config.el;
+        this.plugins = config.plugins || [];
+        this._initPlugins();
+    }
 
-	_initPlugins() {
-		this.plugins.forEach((plugin) => {
-			plugin.run();
-		});
-	}
+    _initPlugins() {
+        this.plugins.forEach((plugin) => {
+            plugin.run(this);
+        });
+    }
 
-	play() {
-		this.media.play();
-	}
+    play() {
+        this.media.play();
+    }
 
-	pause() {
-		this.media.pause();
-	}
+    pause() {
+        this.media.pause();
+    }
 
-	mute() {
-		this.media.muted = true;
-	}
+    togglePlay() {
+        if (this.media.paused) {
+            this.play();
+        } else {
+            this.pause();
+        }
+    }
 
-	unmute() {
-		this.media.muted = false;
-	}
+    mute() {
+        this.media.muted = true;
+    }
 
-	togglePlay() {
-		if (this.media.paused) {
-			this.play();
-		} else {
-			this.pause();
-		}
-	}
+    unmute() {
+        this.media.muted = false;
+    }
 
-	test() {
-		alert("ESTOY FUNCIONANDO AAAAAA");
-	}
+    test() {
+        alert("eu");
+    }
 }
 
 export default MediaPlayer;
