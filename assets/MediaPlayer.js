@@ -19,14 +19,6 @@ class MediaPlayer {
         this.media.pause();
     }
 
-    togglePlay() {
-        if (this.media.paused) {
-            this.play();
-        } else {
-            this.pause();
-        }
-    }
-
     mute() {
         this.media.muted = true;
     }
@@ -35,8 +27,16 @@ class MediaPlayer {
         this.media.muted = false;
     }
 
+    togglePlay() {
+        if (this.media.paused) {
+            this.play();
+        } else {
+            this.pause();
+        }
+    }
+
     test() {
-        alert("eu");
+        alert("ESTOY FUNCIONANDO AAAAAA");
     }
 }
 
