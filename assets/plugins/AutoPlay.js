@@ -1,13 +1,13 @@
 class AutoPlay {
-    constructor() {}
+	constructor() {}
 
-    run(player) {
-        if (!player.muted) {
-            player.muted = true;
-        }
+	run(player) {
+		if (!player.muted) {
+			player.muted = true;
+		}
 
-        player.play();
-    }
+		player.play();
+	}
 }
 
 export default AutoPlay;

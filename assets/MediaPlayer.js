@@ -1,57 +1,53 @@
 class MediaPlayer {
-    constructor(config) {
-        this.media = config.el;
-        this.plugins = config.plugins || [];
-        this._initPlugins();
-    }
+	constructor(config) {
+		this.media = config.el;
+		this.plugins = config.plugins || [];
+		this._initPlugins();
+	}
 
-    _initPlugins() {
-        const player = {
-            play: () => this.play(),
-            pause: () => this.pause(),
-            media: this.media,
+	_initPlugins() {
+		const player = {
+			play: () => this.play(),
+			pause: () => this.pause(),
+			media: this.media,
 
-            get muted() {
-                return this.media.muted;
-            },
+			get muted() {
+				return this.media.muted;
+			},
 
-            set muted(value) {
-                this.media.muted = value;
-            },
-        };
+			set muted(value) {
+				this.media.muted = value;
+			},
+		};
 
-        this.plugins.forEach((plugin) => {
-            plugin.run(player);
-        });
-    }
+		this.plugins.forEach((plugin) => {
+			plugin.run(player);
+		});
+	}
 
-    play() {
-        this.media.play();
-    }
+	play() {
+		this.media.play();
+	}
 
-    pause() {
-        this.media.pause();
-    }
+	pause() {
+		this.media.pause();
+	}
 
-    mute() {
-        this.media.muted = true;
-    }
+	mute() {
+		this.media.muted = true;
+	}
 
-    unmute() {
-        this.media.muted = false;
-    }
+	unmute() {
+		this.media.muted = false;
+	}
 
-    togglePlay() {
-        if (this.media.paused) {
-            this.play();
-        } else {
-            this.pause();
-        }
-    }
-
-    test() {
-        alert("ESTOY FUNCIONANDO AAAAAA");
-    }
+	togglePlay() {
+		if (this.media.paused) {
+			this.play();
+		} else {
+			this.pause();
+		}
+	}
 }
 
 export default MediaPlayer;
